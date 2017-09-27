@@ -1,0 +1,20 @@
+<html>
+<script type="text/javascript">
+    const ipc = require('electron').ipcRenderer;
+    const BrowserWindow = require('electron').remote.BrowserWindow;
+    ipc.on("compute-factorial", (event, number, fromWindowId) => {
+        const result = factorial(number);
+        const fromWindow = BrowserWindow.fromId(fromWindowId);
+        fromWindow.webContents.send("factorial-computed", number, result);
+        window.close();
+    })
+
+    function factorial(number) {
+        if (number === 0)
+            return 1;
+        return number * factorial(number - 1);
+    }
+
+</script>
+
+</html>

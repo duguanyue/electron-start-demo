@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Hello World!</title>
+  <link rel="stylesheet" href="./static/css/bootstrap.min.css">
+</head>
+
+<body>
+  <div class="bs-component">
+    <blockquote>
+      <h1>Hello World!</h1>
+      <!-- All of the Node.js APIs are available in this renderer process. -->
+      We are using Node.js
+      <script>
+        document.write(process.versions.node)
+      </script>, Chromium
+      <script>
+        document.write(process.versions.chrome)
+      </script>, and Electron
+      <script>
+        document.write(process.versions.electron)
+      </script>.
+    </blockquote>
+  </div>
+  <div class="col-lg-12">
+
+    <div class="page-header row">
+      <div class="col-lg-12">
+        <h3>Window</h3>
+      </div>
+    </div>
+
+
+    <div class="form-group">
+      <button class="btn btn-primary btn-sm" id="new-window">Click</button>
+      <button class="btn btn-primary btn-sm" id="manage-window">manage window demo</button><span id="manage-window-reply"></span>
+    </div>
+
+    <div class="form-group">
+      <button class="btn btn-primary btn-sm" id="listen-to-window">Toggle Window Demo</button>
+      <button class="btn btn-primary btn-sm" id="focus-on-model-window">Focus on modal</button>
+    </div>
+
+    <div class="form-group">
+      <button class="btn btn-primary btn-sm" id="no-frame-window">No Frame Demo</button>
+      <button class="btn btn-primary btn-sm" id="process-crash">Process Crash Button</button>
+      <button class="btn btn-primary btn-sm" id="process-hanging">Process Hanging Button</button>
+    </div>
+
+    <div class="page-header row">
+      <div class="col-lg-12">
+        <h3>Menu</h3>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <button class="btn btn-primary btn-sm" id="context-menu">Show Context Menu</button>
+    </div>
+
+    <div class="page-header row">
+      <div class="col-lg-12">
+        <h3>User Interface</h3>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <button class="btn btn-primary btn-sm" id="open-file-manager">Open File Manager</button>
+      <button class="btn btn-primary btn-sm" id="open-ex-links">Open Ex Links</button>
+    </div>
+    <div class="form-group">
+      <button class="btn btn-primary btn-sm" id="select-directory">Select Directory</button>
+      <span id="selected-file"></span>
+    </div>
+    <div class="form-group">
+      <button class="btn btn-primary btn-sm" id="error-dialog">Show Error Dialog</button>
+      <button class="btn btn-primary btn-sm" id="information-dialog">Show Information Dialog</button>
+      <span id="information-selection"></span>
+    </div>
+    <div class="form-group">
+      <button class="btn btn-primary btn-sm" id="save-dialog">Show Save Dialog</button>
+      <span id="file-saved"></span>
+    </div>
+    <div class="form-group">
+      <button class="btn btn-primary btn-sm" id="put-in-tray">Put In Tray</button>
+      <span id="tray-countdown"></span>
+    </div>
+
+    <div class="page-header row">
+      <div class="col-lg-12">
+        <h3>Processes Communication</h3>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <button class="btn btn-primary btn-sm" id="async-msg">Async Message</button>
+      <button class="btn btn-primary btn-sm" id="sync-msg">Sync Message</button>
+      <span id="reply"></span>
+    </div>
+
+    <div class="form-group">
+      <button class="btn btn-primary btn-sm" id="invis-msg">Compute Factorial</button>
+      <span id="invis-reply"></span>
+    </div>
+
+    <div class="page-header row">
+      <div class="col-lg-12">
+        <h3>App & System Information</h3>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <button class="btn btn-primary btn-sm" id="app-info-btn">App Info</button>
+      <span id="app-info"></span>
+    </div>
+    <div class="form-group">
+      <button class="btn btn-primary btn-sm" id="copy-btn">Copy</button>
+      <input type="text" class="input-sm" id="copy-to-input" value="京东欢迎您" placeholder="Copied! Paste here to see." style="width:60%">
+    </div>
+    <div class="form-group">
+      <button class="btn btn-primary btn-sm" id="paste-btn">Copy</button>
+      <span id="paste-to-input"></span>
+    </div>
+  </div>
+
+</body>
+
+<script>
+        // You can also require other files to run in this process
+        require('./renderer.js');
+
+</script>
+
+</html>
