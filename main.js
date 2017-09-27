@@ -183,7 +183,7 @@ let template = [{
   label: 'Help',
   role: 'help',
   submenu: [{
-    label: '京东官方网站',
+    label: '天下官方网站',
     click: function () {
       electron.shell.openExternal('https://www.jd.com');
     }
@@ -332,7 +332,7 @@ app.on("ready", function () {
       type: "info",
       title: "欢迎",
       message: "欢迎新同事",
-      detail: "欢迎来到京东集团！",
+      detail: "欢迎来到天下集团！",
       buttons: ["OK"]
     })
   })
@@ -384,7 +384,7 @@ ipc.on("put-on-tray", event => {
       click: () => event.sender.send("tray-removed")
     }]
   );
-  appIcon.setToolTip("京东集团软件");
+  appIcon.setToolTip("天下集团软件");
   appIcon.setContextMenu(contextMenu);
 });
 
